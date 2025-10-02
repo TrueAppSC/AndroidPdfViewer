@@ -1,16 +1,22 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.github.barteksc.pdfviewer'
+    compileSdk 36
 
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 33
+        targetSdk 36
+    }
+
+    lint {
+        abortOnError true
     }
 }
 
 dependencies {
-    api 'com.github.Goodwy:PdfiumAndroid:ff9cdff7c8'
+//    api 'com.github.Goodwy:PdfiumAndroid:ff9cdff7c8'
+    api project(':pdfium')
     api 'androidx.core:core-ktx:1.9.0'
     api 'androidx.appcompat:appcompat:1.5.1'
 }

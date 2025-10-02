@@ -1,27 +1,19 @@
-buildscript {
-    repositories {
-        google()
-        jcenter()
-    }
-}
-
-repositories {
-    google()
-    jcenter()
-}
-
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    namespace 'com.github.barteksc.sample'
+    compileSdk 36
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 33
+        minSdk 21
+        targetSdk 36
         versionCode 3
         versionName "3.0.0"
     }
 
+    buildFeatures {
+        buildConfig true
+    }
 }
 
 dependencies {
